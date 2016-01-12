@@ -189,3 +189,11 @@ areaVol(lx, gx, ly, gy, lz, gz) := (
   print(V(D2) = volumeEq, "=", volume)
   );
 
+
+normalEquation(A,y):=(
+  t: ctranspose(A),
+  eq: invert(t . A) . (t . y),
+  print(t . A , x = t . y),
+  x=eq
+  );
+
